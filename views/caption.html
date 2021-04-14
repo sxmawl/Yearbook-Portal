@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Write a Caption</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="../public/assets/stylesheets/caption.css">
+</head>
+
+<body>
+    <nav class="navbar">
+
+        <div class="search-bar">
+            <form action="" method="POST">
+            <input type="text" name="user[bitsid]" id="search" placeholder="Search by BITS ID">
+            </form>
+        </div>    
+        <div class="links" id="nav-links">
+            <ul class="nav-links">
+                <li><a href="../views/profile.html">Profile</a></li>
+                <li><a href="../views/nominate.html">Nominate a Friend</a></li>
+                <li><a href="../views/notifications.html">Notifications</a></li>
+                <li><a href="/auth/logout">Logout</a></li>
+        </ul>
+        </div>
+    
+        <div class="button_container" id="toggle" onclick="toggle()">
+            <span class="top"></span>
+            <span class="middle"></span>
+            <span class="bottom"></span>
+        </div>
+    
+        </nav>
+     
+            <div class="success-msg">Success</div>
+   
+    <section class="landing">
+        <h1>Soham has nominated you!</h1>
+        <h2>Write a Caption for your Friend!</h2>
+        <form class="card" action=" " method="POST">
+            <label for="caption">Caption:</label>
+     
+            <input class="form-styling" type="text" placeholder="Caption" name="user[caption]">    
+         
+            <input type="submit" class="btn">
+        </form>
+    </section>
+
+    <footer>
+        <h3>Follow us on:</h3>
+        <div class="icons">
+            <a href="https://www.linkedin.com/company/arcbitspilani/?originalSubdomain=in"><img src="../public/assets/images/linkedin.png" id="linkedin"></a>
+            <a href="https://www.facebook.com/arcbitspilani/"><img src="../public/assets/images/facebook.png" id="fb"></a>
+            <a href="https://www.instagram.com/sarcbitspilani/"><img src="../public/assets/images/instagram.png" id="insta"></a>
+        </div>
+        <button id="back"><a href="/profile/">Back to My Profile</a></button>
+    </footer>
+    
+    <script src="/assets/scipts/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;300&family=Open+Sans:wght@300&display=swap');
+
+/* General boilerplate code for resetting borders and margins */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+	height: 100vh;
+	background: #15142a;
+	background-size: cover;
+}
+
+/* CSS for Navigation Bar and Hamburger Menu */
+nav {
+	height: 65px;
+	background: #004e92;
+}
+
+.navbar {
+	display: flex;
+}
+
+.search-bar {
+	font-family: 'Heebo';
+	padding-top: 12.5px;
+	padding-left: 2vh;
+	width: 35%;
+}
+
+#search {
+	height: 40px;
+	padding-left: 30px;
+	border: none;
+	border-radius: 20px;
+	background: rgba(255, 255, 255, 0.6);
+	font-size: 20px;
+	display: block;
+	width: 90%;
+	overflow: hidden;
+	line-height: 40px;
+}
+
+.links {
+	width: 65%;
+}
+
+.nav-links {
+	font-family: 'Heebo';
+	letter-spacing: 1.5px;
+	font-weight: 300;
+	display: flex;
+	list-style: none;
+	width: 100%;
+	height: 100%;
+	justify-content: space-around;
+	align-items: center;
+	margin-left: auto;
+}
+
+.nav-links li a {
+	color: white;
+	text-decoration: none;
+	font-size: 1.1rem;
+}
+/*CSS for Navigation Bar ends */
+
+/* CSS for the body content */
+.landing {
+	height: 100vh;
+	width: 100%;
+	background: #15142a;
+}
+
+.landing h1 {
+	letter-spacing: 10px;
+	font-family: 'Heebo';
+	font-size: 4rem;
+	color: white;
+	font-weight: 100;
+	padding-top: 8vh;
+	margin-left: 8vh;
+	margin-bottom: 40px;
+}
+
+.landing h2 {
+	padding-left: 20px;
+	letter-spacing: 5px;
+	font-family: 'Heebo';
+	font-size: 1.25rem;
+	color: white;
+	font-weight: 300;
+}
+
+#m1 {
+	width: 80%;
+	height: 15vh;
+	margin-left: 8vh;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-color: #fff;
+	border-width: 1px;
+	border-style: solid;
+}
+
+/* CSS for the button */
+.btn {
+	margin-right: 50px;
+	font-family: 'Open Sans';
+	font-size: 14px;
+	width: 130px;
+	height: 42px;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	font-weight: 300;
+	border-radius: 70px;
+	color: #fff;
+	background: linear-gradient(to bottom right, #5e5aec, #3f9efc);
+	box-shadow: 0 13px 26px rgba(#000, 0.16), 0 3px 6px rgba(#000, 0.16);
+}
+/* CSS for the Back to My Profile Button */
+#back a {
+	text-decoration: none;
+	color: white;
+}
+
+#back {
+	font-family: 'Open Sans';
+	font-size: 16px;
+	margin-top: 6%;
+	width: 170px;
+	height: 50px;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	font-weight: 300;
+	border-radius: 70px;
+	color: #fff;
+	background: linear-gradient(to bottom right, #6452e9, #639ff9);
+	box-shadow: 0 13px 26px rgba(#000, 0.16), 0 3px 6px rgba(#000, 0.16);
+}
+
+footer {
+	text-align: center;
+	font-family: 'Heebo';
+	font-weight: 300;
+	color: black;
+	width: 100%;
+	height: 25vh;
+	background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
+	flex-direction: column;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.icons {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+#linkedin,
+#fb,
+#insta {
+	margin-left: 10px;
+	margin-right: 10px;
+	height: 40px;
+	width: 40px;
+}
+
+#devs {
+	font-family: 'Open Sans';
+	font-size: 16px;
+	width: 120px;
+	height: 40px;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	font-weight: 100;
+	border-radius: 70px;
+	color: #fff;
+	background: linear-gradient(to bottom right, #6452e9, #639ff9);
+	box-shadow: 0 13px 26px rgba(#000, 0.16), 0 3px 6px rgba(#000, 0.16);
+	text-align: center;
+	transition: opacity 0.35s ease;
+	margin-bottom: 10px;
+}
+/* CSS for Quotes Page ends */
+
+/* CSS for the body content ends */
+
+/* Media Queries for Responsive Website */
+@media screen and (max-width: 910px) {
+	/* Code for Navbar and Hamburger Menu */
+	nav {
+		position: relative;
+	}
+
+	.search-bar {
+		position: absolute;
+		width: 80%;
+	}
+
+	.button_container {
+		position: absolute;
+		top: 35%;
+		right: 4%;
+		height: 27px;
+		width: 35px;
+		cursor: pointer;
+		z-index: 200;
+		transition: opacity 0.25s ease;
+	}
+	.button_container.active {
+		position: fixed;
+		top: 3.25%;
+	}
+	.button_container:hover {
+		opacity: 0.7;
+	}
+
+	.button_container.active .top {
+		transform: translateY(11px) translateX(0) rotate(45deg);
+		background: #fff;
+	}
+
+	.button_container.active .middle {
+		opacity: 0;
+		background: #fff;
+	}
+
+	.button_container.active .bottom {
+		transform: translateY(-11px) translateX(0) rotate(-45deg);
+		background: #fff;
+	}
+
+	.button_container span {
+		background: white;
+		border: none;
+		height: 2px;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		transition: all 0.35s ease;
+		cursor: pointer;
+	}
+
+	.button_container span:nth-of-type(2) {
+		top: 11px;
+	}
+
+	.button_container span:nth-of-type(3) {
+		top: 22px;
+	}
+
+	.links {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		font-family: 'Heebo';
+		position: fixed;
+		background: #004e92;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 0%;
+		opacity: 0;
+		z-index: 100;
+		visibility: hidden;
+		transition: opacity 0.35s, visibility 0.35s, height 0.35s;
+		overflow: hidden;
+	}
+
+	.links.open {
+		opacity: 1;
+		visibility: visible;
+		height: 100%;
+	}
+
+	.links.open li {
+		animation: fadeInRight 0.5s ease forwards;
+		animation-delay: 0.35s;
+	}
+
+	.links.open li:nth-of-type(2) {
+		animation-delay: 0.4s;
+	}
+
+	.links.open li:nth-of-type(3) {
+		animation-delay: 0.45s;
+	}
+
+	.links.open li:nth-of-type(4) {
+		animation-delay: 0.5s;
+	}
+	.links ul {
+		list-style: none;
+		padding: 0;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+		position: relative;
+		height: 100%;
+	}
+	.links ul li {
+		display: block;
+		position: relative;
+		opacity: 0;
+		text-align: center;
+	}
+
+	.links ul li a {
+		font-size: 1.5rem;
+		letter-spacing: 5px;
+		font-family: 'Heebo';
+		display: block;
+		position: relative;
+		color: #fff;
+		text-decoration: none;
+		overflow: hidden;
+	}
+
+	.links ul li a:hover:after,
+	.links ul li a:focus:after,
+	.links ul li a:active:after {
+		width: 100%;
+	}
+
+	.links ul li a:after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		width: 0%;
+		transform: translateX(-50%);
+		height: 100%;
+		background: #fff;
+		transition: 0.35s;
+	}
+	.nav-links ul {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	@keyframes fadeInRight {
+		0% {
+			opacity: 0;
+			left: 20%;
+		}
+
+		100% {
+			opacity: 1;
+			left: 0;
+		}
+	}
+	/* Code for Navbar and Hamburger Menu ends*/
+
+	/* Code for main body content */
+
+	#m1 {
+		background: #15142a;
+		border-left: 0px;
+		border-right: 0px;
+		flex-direction: column;
+		width: 100%;
+		height: 165px;
+		margin-left: 0;
+	}
+	.btn {
+		margin-right: 0;
+		margin-bottom: 20px;
+	}
+	.landing {
+		width: 100%;
+		height: auto;
+		min-height: 100vh;
+	}
+	.landing h1 {
+		letter-spacing: 3px;
+		font-size: 2rem;
+		padding-left: 0;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+
+	.landing h2 {
+		padding: 10px;
+		letter-spacing: 1.5px;
+		font-size: 1rem;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+}

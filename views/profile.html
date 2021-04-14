@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="../public/assets/stylesheets/profile.css">
+</head>
+
+<body>
+    <nav class="navbar">
+
+    <div class="search-bar">
+        <form action="/search" method="POST">
+        <input type="text" name="user[bitsid]" id="search" placeholder="Search by BITS ID">
+        </form>
+    </div>
+
+    <div class="links" id="nav-links">
+        <ul class="nav-links">
+            <li><a href="../views/profile.html">Profile</a></li>
+            <li><a href="../views/nominate.html">Nominate a Friend</a></li>
+            <li><a href="../views/notifications.html">Notifications</a></li>
+            <li><a href="/auth/logout">Logout</a></li>
+    </ul>
+    </div>
+
+    <div class="button_container" id="toggle" onclick="toggle()">
+        <span class="top"></span>
+        <span class="middle"></span>
+        <span class="bottom"></span>
+    </div>
+
+    </nav>
+  
+        <div class="error-msg">Message </div>
+ 
+    <section class="landing">
+       
+        <!-- <div class="mask" role="dialog" id="modal-mask"></div>
+        <div class="modal" role="alert" id="modal-main">
+            <span class="close" id="close-modal">X</span>
+            <form class="modal-form" action="/addid/" method="POST">
+                <label for="caption" id="quote-label">Enter your yearbook quote:</label>
+                <input class="form-styling" role="textbox" contenteditable="true" placeholder="Your quote" name="user[quote]" maxlength="160"></span>
+                <input type="submit" class="btn">
+            </form>
+        </div> -->
+
+
+        <div class="card" id="main-photo">
+            <div class="profile-photo">
+              
+                  <div class="photo" style="background-image: url('https://pbs.twimg.com/profile_images/1381334748723744768/H1GeTG2F_400x400.jpg')"></div>
+                                
+                <a href="upload"><button id="photo-upload">Upload Picture</button></a>        
+            </div>
+            <div class="profile">
+                <p class="name"><b>Name: </b>Saksham</p>
+                <p class="id"><b>Email: </b>f20201508@pilani.bits-pilani.ac.in</p>
+            
+                    <p class="id"><b>BITS ID:</b> 2020A7PS1508P</p>
+           
+             
+                <p class="dept"><b>Discipline: </b> CSE </p>
+           
+                <p class="caption"><b>Yearbook Quote: </b> Bhaiya merko coding sikha do. </p>
+          
+            </div>
+        </div>
+    </section>
+    <section class="quotes-page">
+        <h1>What others are saying!</h1>
+      
+        <div class="speech-bubble">
+            <h2>"You bhatura my frend"</h2><h3> Yash </h3>
+        </div>
+        <div class="speech-bubble">
+            <h2>" Gawd "</h2><h3> Pratham </h3>
+        </div>
+        <div class="speech-bubble">
+            <h2>" I love tiddies "</h2><h3> Shreya </h3>
+        </div>
+       
+    </section>
+
+    <footer>
+        <h3>Follow us on:</h3>
+        <div class="icons">
+            <a href="https://www.linkedin.com/company/arcbitspilani/?originalSubdomain=in"><img src="../public/assets/images/linkedin.png" id="linkedin"></a>
+            <a href="https://www.facebook.com/arcbitspilani/"><img src="../public/assets/images/facebook.png" id="fb"></a>
+            <a href="https://www.instagram.com/sarcbitspilani/"><img src="../public/assets/images/instagram.png" id="insta"></a>
+        </div>
+        <button id="back"><a href="/profile/">Back to My Profile</a></button>
+    </footer>
+
+    <script src="/assets/scipts/app.js"></script>
+    <script src="/assets/scipts/new.js"></script>
+</body>
+</html>

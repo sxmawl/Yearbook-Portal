@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100;300&family=Open+Sans:wght@300&display=swap");
+
+/* General boilerplate code for resetting borders and margins */
+body,
+html {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* CSS for main content and slideshow */
+.section-top {
+	overflow: hidden;
+	background-size: cover;
+	background-image: url("../images/image1.JPG");
+	background-repeat: no-repeat;
+	height: 100vh;
+	animation: slide 20s infinite;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background: rgb(100%, 100%, 100%, 0.75);
+	position: absolute;
+	text-align: center;
+	height: 50%;
+	width: 60%;
+}
+
+.card h1 {
+	padding-top: 10px;
+	font-size: 2rem;
+	font-family: "Heebo";
+	font-weight: 300;
+	letter-spacing: 10px;
+}
+
+/* CSS for the google button */
+.google-btn {
+	width: 200px;
+	height: 42px;
+	background-color: #4285f4;
+	border-radius: 4px;
+	box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25);
+	display: flex;
+	align-items: center;
+}
+
+a {
+	text-decoration: none;
+}
+a:visited {
+    color : white;
+}
+.google-icon-wrapper {
+	width: 42px;
+	height: 42px;
+	border-radius: 4px;
+	background-color: white;
+}
+
+.google-icon {
+	margin-top: 8.5px;
+	width: 25px;
+	height: 25px;
+}
+
+.btn-text {
+	margin-left: 6px;
+	float: right;
+	color: white;
+	font-size: 14px;
+	letter-spacing: 0.2px;
+	font-family: "Open Sans";
+}
+
+/* CSS for the Developer note */
+.text p {
+	font-size: 1.25rem;
+	display: inline;
+	font-weight: 100;
+	font-family: "Heebo";
+}
+
+#heart {
+	height: 20px;
+}
+
+/* CSS for Slideshow Animation */
+@keyframes slide {
+	0% {
+		background-image: url("../images/image1.JPG");
+	}
+	20% {
+		background-image: url("../images/image2.JPG");
+	}
+	40% {
+		background-image: url("../images/image3.jpg");
+	}
+	60% {
+		background-image: url("../images/image4.jpg");
+	}
+	80% {
+		background-image: url("../images/image5.jpg");
+	}
+	100% {
+		background-image: url("../images/image6.jpg");
+	}
+}
+
+/* CSS for Responsive Website */
+@media only screen and (max-width: 620px) {
+	.card {
+		width: 350px;
+		height: 400px;
+	}
+}
