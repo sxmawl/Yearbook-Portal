@@ -12,17 +12,16 @@ function signOut() {
 	});
 }
 
+let inputState = true
+
 document.querySelector("input").addEventListener("click", ()=>{
-	for (let i = 20; i <= 32; i=i+0.1) {
 
-		if(i < 32){
-			document.querySelector('.search-bar').style.width = `${i}%`;
+		if(inputState){
+			document.querySelector('.search-bar').style.width = "35%";
+		}else {
+			document.querySelector('.search-bar').style.width = "20%"
 		}
-		else{
-			return;
-		}
-		console.log("loops");
 
-	}
+		inputState = inputState ? false : true ;
 	
 })

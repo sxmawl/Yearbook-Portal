@@ -4,93 +4,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <title>Profile</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../public/assets/stylesheets/developers.css">
 </head>
 
 <body>
-    <nav class="navbar">
-
-        <div class="search-bar">
-            <form action="" method="POST">
-            <input type="text" name="user[bitsid]" id="search" placeholder="Search by BITS ID">
-            </form>
-        </div>
-
-    <div class="links" id="nav-links">
-        <ul class="nav-links">
-                <li><a href="../views/profile.html">Profile</a></li>
-                <li><a href="../views/nominate.html">Nominate a Friend</a></li>
-                <li><a href="../views/notifications.html">Notifications</a></li>
-                <li><a href="/auth/logout">Logout</a></li>
-        </ul>
-    </div>
-
-    <div class="button_container" id="toggle" onclick="toggle()">
-        <span class="top"></span>
-        <span class="middle"></span>
-        <span class="bottom"></span>
-    </div>
-
-    </nav>
 
     <section class="landing">
-            <h1>Developers</h1>
-            <div class="cards">
 
-                <div class="profile">
-                    <div class="photo" style="background-image: url(../public/assets/images/team/ishita1.jpg)"></div>
-                    <h2>Ishita Bhatnagar</h2>
-                    <h3>Project Lead</h3>
-                    <div class="icons">
-                        <a href="https://www.linkedin.com/in/ishita-bhatnagar-77a849175/"><img src="../public/assets/images/linkedin.png"></a>
-                        <a href="https://github.com/IshitaB08"><img src="../public/assets/images/github.png"></a>
-                    </div>
+        <div class="container">
+
+            <div class="navbar-top">
+
+                <div class="search-bar">
+                    <form action="" method="POST">
+                        <div class="search-container">
+                            <i class="fas fa-search"></i> 
+                            <input type="text" name="user[bitsid]" id="search" placeholder="Search by BITS ID">
+                        </div>
+                    </form>
                 </div>
 
-                <div class="profile">
-                    <div class="photo" style="background-image: url(../public/assets/images/team/puney.jpg)"></div>
-                    <h2>Puney Chawla</h2>
-                    <h3>Project Lead</h3>
-                    <div class="icons">
-                        <a href="https://www.linkedin.com/in/puney/"><img src="../public/assets/images/linkedin.png"></a>
-                        <a href="https://github.com/puneychawla"><img src="../public/assets/images/github.png"></a>
-                    </div>
-                </div>
-
-                <div class="profile">
-                    <div class="photo" style="background-image: url(../public/assets/images/team/soham.jpeg)"></div>
-                    <h2>Soham Bhowmick</h2>
-                    <h3>Backend Developer</h3>
-                    <div class="icons">
-                        <a href="https://www.linkedin.com/in/soham-bhowmick-1060ba193/"><img src="../public/assets/images/linkedin.png"></a>
-                        <a href="https://github.com/SohamBhwmxk"><img src="../public/assets/images/github.png"></a>
-                    </div>
-                </div>
-
-                <div class="profile">
-                    <div class="photo" style="background-image: url(../public/assets/images/team/yash.jpg)"></div>
-                    <h2>Yash Thakker</h2>
-                    <h3>Frontend Developer</h3>
-                    <div class="icons">
-                        <a href="https://www.linkedin.com/in/yash-t-151938121/"><img src="../public/assets/images/linkedin.png"></a>
-                        <a href="https://github.com/y-ash2001"><img src="../public/assets/images/github.png"></a>
-                    </div>
+                <div class="links" id="nav-links">
+                    <ul class="nav-links">
+                            <li><a href="../views/profile.html">Profile</a></li>
+                            <li><a href="/auth/logout">Logout</a></li>
+                    </ul>
                 </div>
 
             </div>
-    </section>
+         
+            <div class="team-heading">
+                <h1>Meet Our Team</h1>
+            </div>
+            <div class="main-content">
+                
+              <div class="developer-card">
+                <div class="developer-image"></div>
+              </div>
 
-    <footer>
-        <h3>Follow us on:</h3>
-        <div class="icons">
-            <a href="https://www.linkedin.com/company/arcbitspilani/?originalSubdomain=in"><img src="../public/assets/images/linkedin.png" id="linkedin"></a>
-            <a href="https://www.facebook.com/arcbitspilani/"><img src="../public/assets/images/facebook.png" id="fb"></a>
-            <a href="https://www.instagram.com/sarcbitspilani/"><img src="../public/assets/images/instagram.png" id="insta"></a>
+              <div class="developer-card">
+                <div class="developer-image"></div>
+              </div>
+              
+              <div class="developer-card">
+                <div class="developer-image"></div>
+              </div>
+
+              <div class="developer-card">
+                <div class="developer-image"></div>
+              </div>
+
+              <div class="developer-card">
+                  <div class="developer-image"></div>
+              </div>
+
+              <div class="developer-card">
+                <div class="developer-image"></div>
+              </div>
+              
+            </div>
         </div>
-        <button id="back"><a href="/profile/">Back to My Profile</a></button>
-    </footer>
-
-    <script src="/assets/scipts/app.js"></script>
-    <script src="/assets/scipts/profile.js"></script>
-</body>
-</html>
+    </section>
+            <!-- <footer>
+                <h3>Follow us on:</h3>
+                <div class="icons">
+                    <a href="https://www.linkedin.com/company/arcbitspilani/?originalSubdomain=in"><img src="../public/assets/images/linkedin.png" id="linkedin"></a>
+                    <a href="https://www.facebook.com/arcbitspilani/"><img src="../public/assets/images/facebook.png" id="fb"></a>
+                    <a href="https://www.instagram.com/sarcbitspilani/"><img src="../public/assets/images/instagram.png" id="insta"></a>
+                </div>
+                <button id="back"><a href="/profile/">Back to My Profile</a></button>
+            </footer> -->
+            <script src="../public/assets/scipts/app.js"></script>
+            <script src="https://kit.fontawesome.com/d689986894.js" crossorigin="anonymous"></script>
+        </body>
+        </html>
