@@ -5,6 +5,7 @@
     <title>Profile</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../public/assets/stylesheets/profile.css">
 </head>
@@ -18,15 +19,7 @@
             </form>
         </div>
 
-    <div class="links" id="nav-links">
-        <ul class="nav-links">
-                <li><a href="../views/profile.html">Profile</a></li>
-                <li><a href="../views/nominate.html">Nominate a Friend</a></li>
-                <li><a href="../views/edit-details.html">Edit Profile</a></li>
-                <li><a href="../views/notifications.html">Notifications</a></li>
-                <li><a href="/auth/logout">Logout</a></li>
-        </ul>
-    </div>
+
 
     <div class="button_container" id="toggle" onclick="toggle()">
         <span class="top"></span>
@@ -39,19 +32,52 @@
     <section class="landing">
 
         <div class="container">
+
+            <div class="links" id="nav-links">
+                
+                <ul class="nav-links">
+                        <li><a href="../views/profile.html">Profile</a></li>
+                        <li><a href="/auth/logout">Logout</a></li>
+                </ul>
+            </div>
+
+            <div class="main-content">
             <div class="profile-box">
  
                 <div class="profile-image">
                   
                 </div>
+
+                <div class="profile-name">
+                    <h2>Saksham <span>Aggarwal</span></h2>
+                    
+                </div>
+                <div class="profile-info">
+                 
+                 <div class="profile-info-item">
+                    <i class="fas fa-graduation-cap"></i>
+                    <p>CSE</p>
+                 </div>
+
+                 <div class="profile-info-item">
+                    <i class="fas fa-id-card "></i>
+                    <p>2020A7PS1508P</p>
+                 </div>
+
+                </div>
+                <div class="yearbook-heading">
+                    <h1><span>Yearbook</span> Quote</h1>
+                </div>
+                <div class="yearbook-quote">
+                    <p>"Hum aapke bohot bohot aabhaari hain. Merko vote daalo. Love you guys"</p>
+                   </div>
                 
             </div>
             <div class="comment-box">
              <h1>Here's What my batchies think about me</h1>
             </div>
-
+          </div>
         </div>
-  
     </section>
             <footer>
                 <h3>Follow us on:</h3>
@@ -63,5 +89,6 @@
                 <button id="back"><a href="/profile/">Back to My Profile</a></button>
             </footer>
             <script src="/assets/scipts/app.js"></script>
+            <script src="https://kit.fontawesome.com/d689986894.js" crossorigin="anonymous"></script>
         </body>
         </html>
