@@ -199,7 +199,6 @@ section{
 .container{
 	border-radius: 50px;
 	width: 90%;
-	margin-left:2% ;
 	background-color: white;
 	display: flex;
 	flex-direction: column;
@@ -207,6 +206,7 @@ section{
 	position: relative;
 	border-top-right-radius: 0;
 	margin-top: 4%;
+	margin-right: 2%;
 	border-top-left-radius: 0;
 	box-shadow:
   0 1.3px 11.1px rgba(0, 0, 0, 0.036),
@@ -228,35 +228,65 @@ section{
 	width: 95%;
 	display: flex;
 	justify-content: flex-start;
-	margin-top: 2.5%;
+	margin-top: 2%;
 	font-family: 'Rubik', sans-serif;
 	font-weight: 800;
 	letter-spacing: 1px;
 	font-size: 2rem;
-	color: rgb(50, 60, 73);
+	color: rgb(50, 60, 73,0.85);
 }
 
 .developer-card{
-	width: 25%;
+	width: 24.8%;
     margin: 2% 4%;
-    height: 40vh;
-    background-color: rgb(216, 62, 216);
+	height: 45vh;
+    /* background-color: #F0F2F5; */
 	border-radius: 15px;
+    border: 2px solid #fff5f5;
 	display: flex;
-	justify-content: center;
-	
+	align-items: center;
+	flex-direction: column;
+	box-shadow: -1px 4px 9px 3px hsl(0deg 0% 66% / 22%);
 }
 
 .developer-image{
 	height: 64%;
-	width: 81%;
+	width: 100%;
 	background-size: cover;
     background-position: center;
     border-radius: 15px;
     background-image: url(https://pbs.twimg.com/profile_images/1381334748723744768/H1GeTG2F_400x400.jpg);
-
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
 }
 
+.developer-name{
+
+	font-family: 'Rubik', sans-serif;
+	margin-top: 5%;
+	color: #44566c;
+}
+.developer-name > span{
+	font-weight: 300;
+}
+
+.developer-card > p{
+	margin: 2% 0 4%;
+	font-family: 'Rubik', sans-serif;
+}
+
+.developer-contact{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: 2% 5%;
+}
+.developer-contact > a{
+	margin: 0 8%;
+	transform: scale(1.5);
+	color: #44566c;
+}
 
 /* CSS for developer cards ends */
 /* CSS for the modal */
