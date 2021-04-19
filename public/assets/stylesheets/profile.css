@@ -30,7 +30,6 @@
 body {
 	width: 100%;
 	height: 100vh;
-	background: #15142a;
 	background-size: cover;
 }
 
@@ -77,8 +76,8 @@ nav {
 	display: flex;
 	align-items: center;
 	border-radius: 10px;
-	background: rgba(255, 121, 121, 0.6);
-	padding-left: 3%;
+	background: rgb(233 235 239);
+	padding-left: 5%;
 	width: 100%;
 }
 
@@ -86,6 +85,7 @@ nav {
 	color: #364453;
 	opacity: 0.8;
 	transition: all 2s ease-in;
+	margin-right: 2%;
 }
 
 #search {
@@ -106,21 +106,21 @@ nav {
 
 
 input::-webkit-input-placeholder {
-	color: rgb(252, 252, 252) !important;
+	color: rgb(122, 122, 122) !important;
 }
 
 input:-moz-placeholder {
 	/* Firefox 18- */
-	color: red !important;
+	color: rgb(122, 122, 122) !important;
 }
 
 input::-moz-placeholder {
 	/* Firefox 19+ */
-	color: red !important;
+	color: rgb(122, 122, 122) !important;
 }
 
 input:-ms-input-placeholder {
-	color: red !important;
+	color: rgb(122, 122, 122) !important;
 }
 
 input:focus {
@@ -212,12 +212,13 @@ section {
 	align-items: center;
 	background-color: #F0F2F5;
 	padding: 2%;
+	position: absolute;
 }
 
 .container {
 	border-radius: 50px;
 	width: 90%;
-	margin-left: 2%;
+	margin-left: 3%;
 	height: 90%;
 	background-color: white;
 	display: flex;
@@ -256,8 +257,8 @@ section {
 
 .profile-image:hover {
 	box-shadow:
-		0 0px 6.1px rgba(0, 0, 0, 0.15),
-		0 0px 49px rgba(0, 0, 0, 0.3);
+		0 4px 6.1px rgba(0, 0, 0, 0.085),
+		0 32px 49px rgba(0, 0, 0, 0.17);
 
 	transform: translateZ(-15px) scale(1.02);
 
@@ -303,6 +304,27 @@ i {
 	color: gray;
 }
 
+.profile-button {
+	padding: 5%;
+	background-color: #304CFD;
+	border-radius: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 2% 5%;
+	font-family: 'Rubik', sans-serif;
+	font-weight: 400;
+	border: none;
+	color: rgb(249, 249, 249);
+}
+
+.profile-button:hover {
+	cursor: pointer;
+}
+
+.profile-button:focus {
+	outline: none;
+}
 
 .yearbook-quote {
 	padding: 6% 8% 10% 6%;
@@ -354,6 +376,23 @@ h1 {
 	font-size: 2rem;
 }
 
+.comment-container h1 span::before,
+#batchies::before {
+	content: '';
+	position: absolute;
+	height: 10px;
+	width: 115px;
+	left: 0;
+	bottom: 4px;
+	background-color: #FFABAB;
+	opacity: 0.8;
+	z-index: -1;
+}
+
+#batchies::before {
+	left: unset;
+	width: 158px;
+}
 
 
 /* CSS for Profile Page ends */
@@ -774,7 +813,7 @@ footer {
 }
 
 .c:hover {
-	border: 2px solid rgb(174, 174, 174)
+	border: 2px solid rgb(174, 174, 174);
 }
 
 
@@ -1111,3 +1150,76 @@ footer {
 		font-size: 1.25rem;
 	}
 } */
+
+
+
+/* 
+CSS FOR SOCIAL */
+
+.social {
+	position: absolute;
+	height: 37vh;
+	width: 4.8vw;
+	left: 0px;
+	top: 35vh;
+	background-color: lightskyblue;
+	border-radius: 15px;
+	border-bottom-left-radius: 0;
+	border-top-left-radius: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: rgba(255, 255, 255, .7);
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+}
+
+.red,
+.yellow,
+.blue {
+	content: '';
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	bottom: 5px;
+}
+
+.red {
+	background-color: #F11B26;
+	right: 5px;
+}
+
+.blue {
+	background-color: #7AC3E8;
+	right: 24px;
+}
+
+.yellow {
+	right: 44px;
+	background-color: #FDB32A;
+}
+
+.social a {
+	margin: 0.4vw 0;
+}
+
+.social a i {
+	color: rgb(45, 45, 45);
+}
+
+.sarc-logo {
+	width: inherit;
+	height: 28%;
+	margin-bottom: 0.6rem;
+	border-top-right-radius: 15px;
+	background-image: url(../images/sarc-logo_1-01.jpeg);
+	background-position: center;
+	background-size: cover;
+	border-bottom: black;
+	box-shadow:
+		0 3.3px 7.2px rgba(0, 0, 0, 0.073),
+		0 11.2px 24.1px rgba(0, 0, 0, 0.107),
+		0 50px 108px rgba(0, 0, 0, 0.18);
+
+}

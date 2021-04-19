@@ -21,7 +21,7 @@ document.querySelector("input").addEventListener("click", ()=>{
 		if(inputState){
 			document.querySelector('.search-bar').style.width = "35%";
 		}else {
-			document.querySelector('.search-bar').style.width = "20%"
+			document.querySelector('.search-bar').style.width = "22%"
 		}
 
 		inputState = inputState ? false : true ;
@@ -29,7 +29,7 @@ document.querySelector("input").addEventListener("click", ()=>{
 })
 
 
-
+console.image("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.giphy.com%2Fmedia%2FVuw9m5wXviFIQ%2Fgiphy.gif&f=1&nofb=1")
 
 
 $(".comment-box").scroll(function() {
