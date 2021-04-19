@@ -301,7 +301,12 @@ section {
 }
 
 i {
-	color: gray;
+	color: #525252;
+}
+
+i:hover {
+	color: black;
+	cursor: pointer;
 }
 
 .profile-button {
@@ -1159,7 +1164,7 @@ CSS FOR SOCIAL */
 .social {
 	position: absolute;
 	height: 37vh;
-	width: 4.8vw;
+	width: 4.6vw;
 	left: 0px;
 	top: 35vh;
 	background-color: lightskyblue;
@@ -1204,8 +1209,10 @@ CSS FOR SOCIAL */
 	margin: 0.4vw 0;
 }
 
-.social a i {
-	color: rgb(45, 45, 45);
+
+.social a i:hover {
+	color: black;
+	cursor: pointer;
 }
 
 .sarc-logo {
