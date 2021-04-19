@@ -12,38 +12,36 @@ function signOut() {
 	});
 }
 
-cmnt = document.getElementsByClassName("comment-box")[0];
 
-    window.onscroll = function() {myFunction()};
-    function myFunction() {
-      if (document.cmnt.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementsByClassName("c5")[0].className = "nono";
-      } 
+
+let inputState = true
+
+document.querySelector("input").addEventListener("click", ()=>{
+
+		if(inputState){
+			document.querySelector('.search-bar').style.width = "35%";
+		}else {
+			document.querySelector('.search-bar').style.width = "20%"
+		}
+
+		inputState = inputState ? false : true ;
+	
+})
+
+
+
+
+
+$(".comment-box").scroll(function() {
+  if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight/1.4) {
+      $(".c5").addClass("nono");    
+      $(".c6").addClass("nono");
     
-    //   if (document.body.scrollTop > 320|| document.documentElement.scrollTop > 320) {
-    //     document.getElementById("pic5").className = "picx";
-    //   } 
-      
-    //   if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
-    //     document.getElementById("pic6").className = "p2b";
-    //   } 
-      
-    //   if (document.body.scrollTop > 880|| document.documentElement.scrollTop > 880) {
-    //     document.getElementById("pic7").className = "picx";
-    //   } 
-      
-    //   if (document.body.scrollTop > 1000|| document.documentElement.scrollTop > 1000) {
-    //     document.getElementById("pic8").className = "p2b";
-    //   } 
+  } 
+  if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight/1.1) {
+      $(".c7").addClass("nono");    
+      $(".c8").addClass("nono");
     
-    //   if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
-    //     document.getElementById("pic1").className = "picx";
-    //   } 
-    //   if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
-    //     document.getElementById("pic2").className = "p2b";
-    //   } 
-    //   if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
-    //     document.getElementById("pic3").className = "picx";
-    //   } 
-  }
-    
+  } 
+});
+

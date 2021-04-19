@@ -1,17 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;300&family=Open+Sans:wght@300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
 /* General boilerplate code for resetting borders and margins */
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
+
+.info-msg,
+.success-msg,
+.warning-msg,
+.error-msg {
+	padding: 10px;
+	border-radius: 3px 3px 3px 3px;
+}
+.success-msg {
+	color: #270;
+	background-color: #dff2bf;
+}
+.error-msg {
+	color: #d8000c;
+	background-color: #ffbaba;
+}
 * {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
 }
 
 body {
 	width: 100%;
-	height: 100vh;
 	background: #15142a;
 	background-size: cover;
+	overflow-x: hidden;
 }
 
 /* CSS for Navigation Bar and Hamburger Menu */
@@ -24,34 +40,115 @@ nav {
 	display: flex;
 }
 
+.navbar-top{
+	position: absolute;
+    width: 100%;
+}
 .search-bar {
 	font-family: 'Heebo';
 	padding-top: 12.5px;
 	padding-left: 2vh;
-	width: 35%;
+	background-color: white;
+	top: -66px;
+	border-radius: 15px;
+	position: absolute;
+	padding: 1.5% 1% 3% 2%;
+	z-index: 1;
+}
+
+.search-bar::after{
+	content: "";
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCAxMzYgNzAiPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik02NCA0OC4zMzMzQzQwLjMxMjUgNzAgMCA3MCAwIDcwaDEzNS41VjBoLTguNjczQzEwNC40MSAwIDg1LjcwNDUgMTUuNTg0MiA3NC4zMzA2IDM0LjkwMTUgNzEuMjgxIDQwLjA4MDggNjcuODE2OSA0NC44NDIxIDY0IDQ4LjMzMzN6Ii8+PC9zdmc+);
+    height: 80%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+	right: -140px;
+	z-index: -1;
+    transform: rotateY(180deg);
+}
+
+.search-container{
+	display: flex;
+	align-items: center;
+	border-radius: 10px;
+	background: rgba(255, 121, 121, 0.6);
+	padding-left: 3%;
+	width: 100%;
+}
+
+.search-container i{
+	color: #364453;
+	opacity: 0.8;
+	transition: all 2s ease-in;
 }
 
 #search {
 	height: 40px;
-	padding-left: 30px;
+	padding-left: 10px;
 	border: none;
-	border-radius: 20px;
-	background: rgba(255, 255, 255, 0.6);
+	background: rgba(255, 121, 121, 0);
 	font-size: 20px;
 	display: block;
-	width: 90%;
 	overflow: hidden;
 	line-height: 40px;
+	width: 100%;
+	cursor: text;
+	color: white;
+	transition: width 2s ease-in;
 }
 
+
+
+input::-webkit-input-placeholder {
+	color: rgb(252, 252, 252) !important;
+	}
+	 
+	input:-moz-placeholder { /* Firefox 18- */
+	color: red !important;  
+	}
+	 
+	input::-moz-placeholder {  /* Firefox 19+ */
+	color: red !important;  
+	}
+	 
+	input:-ms-input-placeholder {  
+	color: red !important;  
+	}
+
+input:focus{
+	outline: none;
+}
+input{
+	transition: all 2s ease-in;
+}
 .links {
-	width: 65%;
+	background-color: white;
+	padding: 2% 4% 5% 2%;
+	position: absolute;
+	top: -68px;
+	border-radius: 15px;
+	z-index: 1;
+	right: 0;
+}
+
+ul::before{
+	content: "";
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCAxMzYgNzAiPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik02NCA0OC4zMzMzQzQwLjMxMjUgNzAgMCA3MCAwIDcwaDEzNS41VjBoLTguNjczQzEwNC40MSAwIDg1LjcwNDUgMTUuNTg0MiA3NC4zMzA2IDM0LjkwMTUgNzEuMjgxIDQwLjA4MDggNjcuODE2OSA0NC44NDIxIDY0IDQ4LjMzMzN6Ii8+PC9zdmc+);
+    height: 70%;
+    width: inherit;
+    position: absolute;
+    top: 0px;
+	left: -119px;
+	z-index: -1;
 }
 
 .nav-links {
-	font-family: 'Heebo';
-	letter-spacing: 1.5px;
-	font-weight: 300;
+	font-family: Rubik;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.6rem;
+    color: #5F6F81;
 	display: flex;
 	list-style: none;
 	width: 100%;
@@ -60,90 +157,407 @@ nav {
 	align-items: center;
 	margin-left: auto;
 }
+.nav-links li{
+	margin: 0 10%;
+}
 
 .nav-links li a {
-	color: white;
+	color: rgb(58, 57, 57);
 	text-decoration: none;
 	font-size: 1.1rem;
 }
 /*CSS for Navigation Bar ends */
 
-.landing {
-	height: 100%;
+/* CSS for the Profile Page*/
+.card {
+	font-family: 'Heebo';
+	font-weight: 300;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	height: 100vh;
 	width: 100%;
 	background: #15142a;
+	background-size: cover;
+	box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.2);
+	overflow: hidden;
+	transition: all 0.5s ease;
 }
 
-.landing h1 {
+/* CSS for the developer cards */
+
+section{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #F0F2F5;
+	padding: 2% ;
+}
+
+.container{
+	border-radius: 50px;
+	width: 90%;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	position: relative;
+	border-top-right-radius: 0;
+	margin-top: 4%;
+	margin-right: 2%;
+	border-top-left-radius: 0;
+	box-shadow:
+  0 1.3px 11.1px rgba(0, 0, 0, 0.036),
+  0 2.9px 37.3px rgba(0, 0, 0, 0.054),
+  0 10px 167px rgba(0, 0, 0, 0.09);
+
+}
+
+.main-content{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.team-heading{
+	width: 95%;
+	display: flex;
+	justify-content: flex-start;
+	margin-top: 2%;
+	font-family: 'Rubik', sans-serif;
+	font-weight: 800;
+	letter-spacing: 1px;
+	font-size: 2rem;
+	color: rgb(50, 60, 73,0.85);
+}
+
+.developer-card{
+	width: 24.8%;
+    margin: 2% 4%;
+	height: 45vh;
+    /* background-color: #F0F2F5; */
+	border-radius: 15px;
+    border: 2px solid #fff5f5;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	box-shadow: -1px 4px 9px 3px hsl(0deg 0% 66% / 22%);
+}
+
+.developer-image{
+	height: 64%;
+	width: 100%;
+	background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    background-image: url(https://pbs.twimg.com/profile_images/1381334748723744768/H1GeTG2F_400x400.jpg);
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.developer-name{
+
+	font-family: 'Rubik', sans-serif;
+	margin-top: 5%;
+	color: #44566c;
+}
+.developer-name > span{
+	font-weight: 300;
+}
+
+.developer-card > p{
+	margin: 2% 0 4%;
+	font-family: 'Rubik', sans-serif;
+}
+
+.developer-contact{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: 2% 5%;
+}
+.developer-contact > a{
+	margin: 0 8%;
+	transform: scale(1.5);
+	color: #44566c;
+}
+
+/* CSS for developer cards ends */
+/* CSS for the modal */
+.close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 20px;
+	height: 20px;
+	background: #000;
+	color: #fff;
+	cursor: pointer;
+	border: 0;
+}
+
+.mask {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(52, 73, 94, 0.8);
+	z-index: 50;
+
+	transition: 0.7s;
+}
+
+.modal {
+	position: fixed;
+	top: 60%;
+	left: 47%;
+	width: 500px;
+	
+	margin-left: -200px;
+	margin-top: -300px;
+	background: #15142a;
+	background-size: cover;
+	box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.2);
+	z-index: 100;
+
+	opacity: 1;
+
+	transition: 0.5s ease-out;
+
+	transform: translateY(45px);
+}
+
+.active {
+	visibility: visible;
+	opacity: 1;
+}
+
+.active + .modal {
+	visibility: visible;
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.modal-form {
+	font-family: 'Heebo';
+	font-weight: 300;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	height: 100%;
+}
+
+.form-styling {
+	text-align: center;
+	border: none;
+	border-radius: 20px;
+	margin-bottom: 20px;
+	background: rgba(255, 255, 255, 0.4);
+	font-size: 20px;
+	display: block;
+	width: 70%;
+	overflow: hidden;
+	min-height: 40px;
+	line-height: 40px;
+}
+
+input::-webkit-input-placeholder {
+	color: #888;
+}
+
+input:focus::-webkit-input-placeholder {
+	color: #999;
+}
+
+label {
+	font-family: 'Heebo';
+	font-weight: 300;
+	font-size: 2rem;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	color: rgba(255, 255, 255, 0.9);
+	display: block;
+}
+
+.btn {
+	font-family: 'Open Sans';
+	font-size: 14px;
+	margin-top: 10px;
+	width: 130px;
+	height: 42px;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	font-weight: 300;
+	border-radius: 70px;
+	color: #fff;
+	background: linear-gradient(to bottom right, #5e5aec, #3f9efc);
+	box-shadow: 0 13px 26px rgba(#000, 0.16), 0 3px 6px rgba(#000, 0.16);
+	margin-bottom: 20px;
+}
+/* CSS for the modal ends */
+
+/* CSS for the Quotes display page */
+.quotes-page {
+	font-family: 'Heebo';
+	font-weight: 300;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 100vh;
+	height: auto;
+	width: 100%;
+	background: #15142a;
+	background-size: cover;
+	box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.2);
+	overflow: hidden;
+	transition: all 0.5s ease;
+	padding-bottom: 50px;
+}
+
+/* CSS for the popup modal */
+.modalDialog {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.8);
+	z-index: 99999;
+	opacity: 0;
+	-webkit-transition: opacity 100ms ease-in;
+	-moz-transition: opacity 100ms ease-in;
+	transition: opacity 100ms ease-in;
+	pointer-events: none;
+}
+.modalDialog:target {
+	opacity: 1;
+	pointer-events: auto;
+}
+.modalDialog > div {
+	max-width: 800px;
+	width: 90%;
+	position: relative;
+	margin: 10% auto;
+	padding: 20px;
+	border-radius: 3px;
+	background: #fff;
+}
+.close {
+	font-family: Arial, Helvetica, sans-serif;
+	background: #f26d7d;
+	color: #fff;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 34px;
+	height: 34px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+	padding-top: 5px;
+}
+.close:hover {
+	background: #fa3f6f;
+}
+
+.speech-bubble {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	position: relative;
+	background: #004e92;
+	min-height: 200px;
+}
+
+.speech-bubble:nth-child(2n) {
+	border-left: 10px solid white;
+}
+
+.speech-bubble:nth-child(2n):after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 80%;
+	width: 0;
+	height: 0;
+	border: 60px solid transparent;
+	border-top-color: #004e92;
+	border-bottom: 0;
+	border-right: 0;
+	margin-left: -30px;
+	margin-bottom: -59px;
+}
+
+.speech-bubble:nth-child(2n + 1) {
+	border-right: 10px solid white;
+}
+
+.speech-bubble:nth-child(2n + 1):after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 20%;
+	width: 0;
+	height: 0;
+	border: 60px solid transparent;
+	border-top-color: #004e92;
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -30px;
+	margin-bottom: -59px;
+}
+
+.quotes-page h1 {
 	letter-spacing: 10px;
 	font-family: 'Heebo';
 	font-size: 4rem;
 	color: white;
 	font-weight: 100;
-	padding-top: 8vh;
-	margin-left: 8vh;
-	margin-bottom: 40px;
+	margin-top: 8vh;
 }
 
-.landing h2 {
-	text-align: center;
-	letter-spacing: 2px;
+.quotes-page h2 {
+	letter-spacing: 5px;
+	font-family: 'Heebo';
+	font-size: 2.5rem;
+	color: white;
+	font-weight: 300;
+	margin-top: 4vh;
+	margin-left: 4vh;
+	margin-right: 30px;
+}
+
+.quotes-page h3 {
+	letter-spacing: 5px;
 	font-family: 'Heebo';
 	font-size: 1.5rem;
 	color: white;
-	font-weight: 300;
-}
-
-.landing h3 {
-	text-align: center;
-	letter-spacing: 2px;
-	font-family: 'Heebo';
-	font-size: 1.15rem;
-	color: white;
 	font-weight: 100;
+	float: right;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-right: 70px;
 }
 
-.cards {
-	display: flex;
-	align-items: center;
-	justify-content: space-evenly;
-	flex-wrap: wrap;
+.quotes-page div {
+	width: 90%;
 }
 
-.profile {
-	width: 300px;
-	height: 400px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	align-items: center;
-	border-radius: 28px;
-	background: linear-gradient(145deg, #131226, #16152d);
-	box-shadow: 20px 20px 60px #121124, -20px -20px 60px #181730;
-}
-
-.icons img {
-	height: 40px;
-	width: 40px;
-	margin: 15px;
-}
-
-.photo {
-	width: 220px;
-	height: 220px;
-	-webkit-border-radius: 60px;
-	-webkit-background-clip: padding-box;
-	-moz-border-radius: 60px;
-	-moz-background-clip: padding;
-	border-radius: 50%;
-	background-clip: padding-box;
-	margin: 7px 0 0 5px;
-	float: left;
-	background-size: cover;
-	background-position: center center;
-}
-
-/* CSS for Footer */
 footer {
 	text-align: center;
 	font-family: 'Heebo';
@@ -173,25 +587,43 @@ footer {
 	width: 40px;
 }
 
-#back a {
-	text-decoration: none;
-	color: white;
-}
-
-#back {
+#devs {
 	font-family: 'Open Sans';
-	font-size: 14px;
-	width: 150px;
+	font-size: 16px;
+	width: 120px;
 	height: 40px;
 	outline: none;
 	border: none;
 	cursor: pointer;
-	font-weight: 300;
+	font-weight: 100;
 	border-radius: 70px;
 	color: #fff;
 	background: linear-gradient(to bottom right, #6452e9, #639ff9);
 	box-shadow: 0 13px 26px rgba(#000, 0.16), 0 3px 6px rgba(#000, 0.16);
+	text-align: center;
+	transition: opacity 0.35s ease;
+	margin-bottom: 10px;
 }
+
+#photo-upload {
+	font-family: 'Open Sans';
+	font-size: 16px;
+	width: 150px;
+	height: 42px;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	font-weight: 100;
+	border-radius: 70px;
+	color: #fff;
+	background: linear-gradient(to bottom right, #6452e9, #639ff9);
+	box-shadow: 0 13px 26px rgba(#000, 0.16), 0 3px 6px rgba(#000, 0.16);
+	text-align: center;
+	transition: opacity 0.35s ease;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
 /* CSS for Quotes Page ends */
 
 /* CSS for Responsive Website */
@@ -362,22 +794,123 @@ footer {
 			left: 0;
 		}
 	}
+
 	/* Code for Navbar and Hamburger Menu ends*/
-	.landing {
+	.landing,
+	.quotes-page,
+	.card {
 		width: 100%;
 		height: auto;
 		min-height: 100vh;
 	}
+	/* Code for Profile Page */
+	.profile-photo {
+		/* display: flex;
+		flex-direction: row;
+		justify-content: center; */
+		padding-left: 0;
+		width: 100%;
+	}
+
+	.photo {
+		width: 250px;
+		height: 250px;
+	}
+
 	.profile {
 		margin-top: 20px;
-		margin-bottom: 20px;
-	}
-	.landing h1 {
 		text-align: center;
+		width: 100%;
+	}
+
+	.profile p {
 		letter-spacing: 2px;
-		font-size: 2.25rem;
+		padding: 4px;
+	}
+
+	.card {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		height: 92vh;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.container {
+		height: 250px;
+		width: 250px;
+	}
+
+	img {
+		height: 250px;
+		width: 250px;
+	}
+	.overlay {
+		height: 250px;
+		width: 250px;
+	}
+	.profile-photo {
+		margin-top: 30px;
+	}
+
+	/* CSS for the Profile Content */
+	.name {
+		color: rgba(255, 255, 255, 0.9);
+		font-size: 1.75rem;
+	}
+
+	.id,
+	.dept,
+	.caption {
+		color: rgba(255, 255, 255, 0.8);
+		font-size: 1.5rem;
+	}
+
+	/* CSS for the Quotes Page */
+
+	.quotes-page h1 {
+		letter-spacing: 5px;
+		font-size: 2rem;
+		color: white;
 		font-weight: 100;
-		margin-left: 0;
-		margin-bottom: 20px;
+		text-align: center;
+	}
+
+	.quotes-page h2 {
+		padding-top: 15px;
+		letter-spacing: 2px;
+		font-size: 1.5rem;
+		margin-top: 4vh;
+		margin-left: 4vh;
+		margin-right: 2vh;
+	}
+
+	.quotes-page h3 {
+		letter-spacing: 2px;
+		font-family: 'Heebo';
+		font-size: 1.25rem;
+		color: white;
+		font-weight: 100;
+		float: right;
+		margin-right: 2vh;
+	}
+	#photo-button {
+		height: 40px;
+		width: 125px;
+	}
+	/* CSS for Quotes page ends */
+}
+@media screen and (max-width: 430px) {
+	.modal {
+		width: 90%;
+		position: absolute;
+		margin: 0;
+		top: 20%;
+		left: 5%;
+	}
+	label {
+		font-size: 1.25rem;
 	}
 }

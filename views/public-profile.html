@@ -12,35 +12,31 @@
 </head>
 
 <body>
-    <nav class="navbar">
-
-        <div class="search-bar">
-            <form action="" method="POST">
-            <input type="text" name="user[bitsid]" id="search" placeholder="Search by BITS ID">
-            </form>
-        </div>
-
-
-
-    <div class="button_container" id="toggle" onclick="toggle()">
-        <span class="top"></span>
-        <span class="middle"></span>
-        <span class="bottom"></span>
-    </div>
-
-    </nav>
 
     <section class="landing">
 
         <div class="container">
 
-            <div class="links" id="nav-links">
-                
-                <ul class="nav-links">
-                        <li><a href="../views/profile.html">Profile</a></li>
-                        <li><a href="/auth/logout">Logout</a></li>
-                </ul>
+            <div class="navbar-top">
+
+                <div class="search-bar">
+                    <form action="" method="POST">
+                        <div class="search-container">
+                            <i class="fas fa-search"></i> 
+                            <input type="text" name="user[bitsid]" id="search" placeholder="Search by BITS ID">
+                        </div>
+                    </form>
+                </div>
+
+                <div class="links" id="nav-links">
+                    <ul class="nav-links">
+                            <li><a href="../views/profile.html">Profile</a></li>
+                            <li><a href="/auth/logout">Logout</a></li>
+                    </ul>
+                </div>
+
             </div>
+         
 
             <div class="main-content">
             <div class="profile-box">
@@ -67,7 +63,7 @@
 
                 </div>
                 <div class="yearbook-heading">
-                    <h1><span>Yearbook</span> Quote</h1>
+                    <h1><span>Yearbook </span> Quote</h1>
                 </div>
                 <div class="yearbook-quote">
                     <p>"Hum aapke bohot bohot aabhaari hain. Merko vote daalo. Love you guys"</p>
@@ -97,31 +93,8 @@
                 </div>
                 <button id="back"><a href="/profile/">Back to My Profile</a></button>
             </footer>
-            <!-- <script src="/assets/scipts/app.js"></script> -->
+            <script src="../public/assets/scipts/app.js"></script>
             <script src="https://kit.fontawesome.com/d689986894.js" crossorigin="anonymous"></script>
-<script>
-
-
-
-$(".comment-box").scroll(function() {
-    if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight/1.4) {
-        $(".c5").addClass("nono");    
-        $(".c6").addClass("nono");
-      
-    } 
-    if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight/1.1) {
-        $(".c7").addClass("nono");    
-        $(".c8").addClass("nono");
-      
-    } 
-
-
-
-
-
-});
-
-</script>
 
 
 
