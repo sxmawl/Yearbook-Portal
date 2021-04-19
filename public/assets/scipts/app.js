@@ -29,3 +29,19 @@ document.querySelector("input").addEventListener("click", ()=>{
 })
 
 
+
+
+
+$(".comment-box").scroll(function() {
+  if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight/1.4) {
+      $(".c5").addClass("nono");    
+      $(".c6").addClass("nono");
+    
+  } 
+  if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight/1.1) {
+      $(".c7").addClass("nono");    
+      $(".c8").addClass("nono");
+    
+  } 
+});
+

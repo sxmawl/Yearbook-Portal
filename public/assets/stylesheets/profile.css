@@ -319,12 +319,6 @@ i{
 Comment Box */
 
 
-.comment-box{
-	width: 70%;
-	height: 100%;
-	padding: 3% 2%;
-}
-
 h1{
 	font-family: 'Rubik', sans-serif;
 	font-weight: 900;
@@ -669,6 +663,169 @@ footer {
 	margin-bottom: 10px;
 	margin-top: 10px;
 }
+
+
+
+.comment-box{    overflow-x: hidden;
+	overflow-y: auto;
+	width: 70%;
+	height: 80%;
+	padding: 3% 2%;
+margin-left: 28%;
+	margin-top: -55%;
+	position: absolute;
+}
+
+.c1{    width: 40%;
+	height: 50%;
+		background: rgba( 255, 255, 255, 0.35);
+	box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+	backdrop-filter: blur( 4.5px );
+	-webkit-backdrop-filter: blur( 4.5px );
+	border-radius: 10px;
+	border: 1px solid rgba( 255, 255, 255, 0.18 );
+	font-size: 1.3vw;
+	position: absolute;
+	opacity: 1;
+animation: haha 4s 1;
+	}
+
+
+
+
+	@keyframes haha {
+
+from{ opacity: 0.3;} 
+to {opacity: 1;}
+	}
+.c2{    width: 50%;
+	height: 50%;
+		background: rgba( 255, 255, 255, 0.35);
+	box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+	backdrop-filter: blur( 4.5px );
+	-webkit-backdrop-filter: blur( 4.5px );
+	border-radius: 10px;
+	border: 1px solid rgba( 255, 255, 255, 0.18 );
+	font-size: 1.3vw;
+	position: absolute;
+	margin-left: 45%;
+	margin-top: 0%;
+	animation: haha 4s 1  ;
+	}
+
+	.c3{    width: 50%;
+		height: 50%;
+			background: rgba( 255, 255, 255, 0.35);
+		box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+		backdrop-filter: blur( 4.5px );
+		-webkit-backdrop-filter: blur( 4.5px );
+		border-radius: 10px;
+		border: 1px solid rgba( 255, 255, 255, 0.18 );
+		font-size: 1.3vw;
+		position: absolute;
+		margin-top: 35%;
+		animation: haha 4s 1 0.5s ;
+
+		}
+
+		.c4{    width: 40%;
+			height: 50%;
+				background: rgba( 255, 255, 255, 0.35);
+			box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+			backdrop-filter: blur( 4.5px );
+			-webkit-backdrop-filter: blur( 4.5px );
+			border-radius: 10px;
+			border: 1px solid rgba( 255, 255, 255, 0.18 );
+			font-size: 1.3vw;
+			position: absolute;
+			margin-top: 35%;	margin-left: 55%;
+			animation: haha 4s 1 0.5s ;
+
+
+			}
+
+			.c5{    width: 40%;
+				height: 50%;
+					background: rgba( 255, 255, 255, 0.35);
+				box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+				backdrop-filter: blur( 4.5px );
+				-webkit-backdrop-filter: blur( 4.5px );
+				border-radius: 10px;
+				border: 1px solid rgba( 255, 255, 255, 0.18 );
+				font-size: 1.3vw;
+				position: absolute;
+				opacity: 1;
+			/* animation: haha 3s 1; */
+			margin-top: 70%;
+				}
+			.nono{
+			
+				animation: haha 4s 1;
+
+
+			}
+
+
+
+
+		
+			.c6{    width: 50%;
+				height: 50%;
+					background: rgba( 255, 255, 255, 0.35);
+				box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+				backdrop-filter: blur( 4.5px );
+				-webkit-backdrop-filter: blur( 4.5px );
+				border-radius: 10px;
+				border: 1px solid rgba( 255, 255, 255, 0.18 );
+				font-size: 1.3vw;
+				position: absolute;
+				margin-left: 45%;
+				/* animation: haha 3s 1  ; */
+				margin-top: 70%;
+				}
+			
+				.c7{    width: 50%;
+					height: 50%;
+						background: rgba( 255, 255, 255, 0.35);
+					box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+					backdrop-filter: blur( 4.5px );
+					-webkit-backdrop-filter: blur( 4.5px );
+					border-radius: 10px;
+					border: 1px solid rgba( 255, 255, 255, 0.18 );
+					font-size: 1.3vw;
+					position: absolute;
+					margin-top: 105%;
+					/* animation: haha 3s 1 0.5s ; */
+			
+					}
+			
+					.c8{    width: 40%;
+						height: 50%;
+							background: rgba( 255, 255, 255, 0.35);
+						box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+						backdrop-filter: blur( 4.5px );
+						-webkit-backdrop-filter: blur( 4.5px );
+						border-radius: 10px;
+						border: 1px solid rgba( 255, 255, 255, 0.18 );
+						font-size: 1.3vw;
+						position: absolute;
+					margin-left: 55%;
+						/* animation: haha 3s 1 0.5s ; */
+						margin-top: 105%;
+			
+						}
+				
+
+
+
+
+
+
+
+
+
+
+
 
 /* CSS for Quotes Page ends */
 
