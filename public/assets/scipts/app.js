@@ -12,6 +12,8 @@ function signOut() {
 	});
 }
 
+
+
 let inputState = true
 
 document.querySelector("input").addEventListener("click", ()=>{
@@ -25,3 +27,5 @@ document.querySelector("input").addEventListener("click", ()=>{
 		inputState = inputState ? false : true ;
 	
 })
+
+

@@ -63,7 +63,7 @@ nav {
     width: 100%;
     position: absolute;
     top: 0px;
-	right: -119px;
+	right: -140px;
 	z-index: -1;
     transform: rotateY(180deg);
 }
