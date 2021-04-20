@@ -28,9 +28,10 @@
 }
 
 body {
-	width: 100%;
+	width: 100vw;
 	height: 100vh;
 	background-size: cover;
+	overflow: hidden;
 }
 
 /* CSS for Navigation Bar and Hamburger Menu */
@@ -205,8 +206,8 @@ ul::before {
 }
 
 section {
-	width: 100%;
-	height: 100%;
+	width: 100vw;
+	height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -312,7 +313,7 @@ i:hover {
 .profile-button {
 	padding: 5%;
 	background-color: #304CFD;
-	border-radius: 20px;
+	border-radius: 30px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -753,7 +754,7 @@ footer {
 
 
 .comment-box {
-	height: 65vh;
+	height: 70vh;
 	overflow-y: auto;
 	flex-wrap: wrap;
 	width: 100%;
@@ -772,15 +773,12 @@ footer {
 	columns: 3;
 	column-gap: 0vw;
 
-	@media (max-width: 1200px) {
-		columns: 3;
-	}
 
-	@media (max-width: 992px) {
-		columns: 2;
-	}
+
 
 }
+
+
 
 .grid {
 	display: inline-block;
@@ -844,303 +842,11 @@ footer {
 /* CSS for Quotes Page ends */
 
 /* CSS for Responsive Website */
-@media screen and (max-width: 910px) {
+/* @media screen and (max-width: 910px) {
 
-	/* Code for Navbar and Hamburger Menu */
-	nav {
-		position: relative;
-	}
+	
 
-	.search-bar {
-		position: absolute;
-		width: 80%;
-		transition: 2s ease-in all;
-	}
-
-	.button_container {
-		position: absolute;
-		top: 35%;
-		right: 4%;
-		height: 27px;
-		width: 35px;
-		cursor: pointer;
-		z-index: 200;
-		transition: opacity 0.25s ease;
-	}
-
-	.button_container.active {
-		position: fixed;
-		top: 3.25%;
-	}
-
-	.button_container:hover {
-		opacity: 0.7;
-	}
-
-	.button_container.active .top {
-		transform: translateY(11px) translateX(0) rotate(45deg);
-		background: #fff;
-	}
-
-	.button_container.active .middle {
-		opacity: 0;
-		background: #fff;
-	}
-
-	.button_container.active .bottom {
-		transform: translateY(-11px) translateX(0) rotate(-45deg);
-		background: #fff;
-	}
-
-	.button_container span {
-		background: white;
-		border: none;
-		height: 2px;
-		width: 100%;
-		position: absolute;
-		top: 0;
-		left: 0;
-		transition: all 0.35s ease;
-		cursor: pointer;
-	}
-
-	.button_container span:nth-of-type(2) {
-		top: 11px;
-	}
-
-	.button_container span:nth-of-type(3) {
-		top: 22px;
-	}
-
-	.links {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-around;
-		align-items: center;
-		font-family: 'Heebo';
-		position: fixed;
-		background: #004e92;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 0%;
-		opacity: 0;
-		z-index: 100;
-		visibility: hidden;
-		transition: opacity 0.35s, visibility 0.35s, height 0.35s;
-		overflow: hidden;
-	}
-
-	.links.open {
-		opacity: 1;
-		visibility: visible;
-		height: 100%;
-	}
-
-	.links.open li {
-		animation: fadeInRight 0.5s ease forwards;
-		animation-delay: 0.35s;
-	}
-
-	.links.open li:nth-of-type(2) {
-		animation-delay: 0.4s;
-	}
-
-	.links.open li:nth-of-type(3) {
-		animation-delay: 0.45s;
-	}
-
-	.links.open li:nth-of-type(4) {
-		animation-delay: 0.5s;
-	}
-
-	.links ul {
-		list-style: none;
-		padding: 0;
-		margin: 0 auto;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-evenly;
-		align-items: center;
-		position: relative;
-		height: 100%;
-	}
-
-	.links ul li {
-		display: block;
-		position: relative;
-		opacity: 0;
-		text-align: center;
-	}
-
-	.links ul li a {
-		font-size: 1.5rem;
-		letter-spacing: 5px;
-		font-family: 'Heebo';
-		display: block;
-		position: relative;
-		color: #fff;
-		text-decoration: none;
-		overflow: hidden;
-	}
-
-	.links ul li a:hover:after,
-	.links ul li a:focus:after,
-	.links ul li a:active:after {
-		width: 100%;
-	}
-
-	.links ul li a:after {
-		content: '';
-		position: absolute;
-		bottom: 0;
-		left: 50%;
-		width: 0%;
-		transform: translateX(-50%);
-		height: 100%;
-		background: #fff;
-		transition: 0.35s;
-	}
-
-	.nav-links ul {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-
-	@keyframes fadeInRight {
-		0% {
-			opacity: 0;
-			left: 20%;
-		}
-
-		100% {
-			opacity: 1;
-			left: 0;
-		}
-	}
-
-	/* Code for Navbar and Hamburger Menu ends*/
-	.landing,
-	.quotes-page,
-	.card {
-		width: 100%;
-		height: auto;
-		min-height: 100vh;
-	}
-
-	/* Code for Profile Page */
-	.profile-photo {
-		/* display: flex;
-		flex-direction: row;
-		justify-content: center; */
-		padding-left: 0;
-		width: 100%;
-		transition: all 0.8s ease-in;
-	}
-
-	.profile-photo:hover {
-		transform: scale(1.2);
-
-
-	}
-
-
-
-	.photo {
-		width: 250px;
-		height: 250px;
-	}
-
-	.profile {
-		margin-top: 20px;
-		text-align: center;
-		width: 100%;
-	}
-
-	.profile p {
-		letter-spacing: 2px;
-		padding: 4px;
-	}
-
-	.card {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		height: 92vh;
-		width: 100%;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	.container {
-		height: 250px;
-		width: 250px;
-	}
-
-	img {
-		height: 250px;
-		width: 250px;
-	}
-
-	.overlay {
-		height: 250px;
-		width: 250px;
-	}
-
-	.profile-photo {
-		margin-top: 30px;
-	}
-
-	/* CSS for the Profile Content */
-	.name {
-		color: rgba(255, 255, 255, 0.9);
-		font-size: 1.75rem;
-	}
-
-	.id,
-	.dept,
-	.caption {
-		color: rgba(255, 255, 255, 0.8);
-		font-size: 1.5rem;
-	}
-
-	/* CSS for the Quotes Page */
-
-	.quotes-page h1 {
-		letter-spacing: 5px;
-		font-size: 2rem;
-		color: white;
-		font-weight: 100;
-		text-align: center;
-	}
-
-	.quotes-page h2 {
-		padding-top: 15px;
-		letter-spacing: 2px;
-		font-size: 1.5rem;
-		margin-top: 4vh;
-		margin-left: 4vh;
-		margin-right: 2vh;
-	}
-
-	.quotes-page h3 {
-		letter-spacing: 2px;
-		font-family: 'Heebo';
-		font-size: 1.25rem;
-		color: white;
-		font-weight: 100;
-		float: right;
-		margin-right: 2vh;
-	}
-
-	#photo-button {
-		height: 40px;
-		width: 125px;
-	}
-
-	/* CSS for Quotes page ends */
-}
+} */
 
 /* @media screen and (max-width: 430px) {
 	.modal {
@@ -1205,8 +911,13 @@ CSS FOR SOCIAL */
 	background-color: #FDB32A;
 }
 
-.social a {
+.social-links a {
 	margin: 0.4vw 0;
+}
+
+.social-links {
+	display: flex;
+	flex-direction: column;
 }
 
 
@@ -1228,5 +939,274 @@ CSS FOR SOCIAL */
 		0 3.3px 7.2px rgba(0, 0, 0, 0.073),
 		0 11.2px 24.1px rgba(0, 0, 0, 0.107),
 		0 50px 108px rgba(0, 0, 0, 0.18);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 992px) {
+	.masonry {
+		columns: 2;
+	}
+
+	.comment-container h1 {
+		font-size: 1.5rem;
+	}
+}
+
+@media (max-width: 600px) {
+	.masonry {
+		columns: 1;
+	}
+
+	.navbar-top {
+		top: 0;
+	}
+
+	.main-content {
+		flex-direction: column;
+		align-items: center;
+		height: 100%;
+	}
+
+	.container {
+		position: unset;
+		width: 100%;
+		align-items: center;
+		margin: 0;
+		border-radius: 20px;
+	}
+
+	.links {
+		background-color: #ffffff;
+		padding: 3%;
+		position: absolute;
+		border-radius: 15px;
+		z-index: 1;
+		right: 0;
+	}
+
+	.comment-container {
+		width: 90%;
+		height: 66%;
+		margin-top: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.comment-container h1 {
+		font-size: 0.7rem;
+		position: relative;
+		text-align: center;
+		margin-bottom: 0.4rem;
+	}
+
+	.comment-container h1 span::before {
+		bottom: 1px;
+		left: 0;
+		width: 43px;
+		height: 5px;
+	}
+
+	#batchies::before {
+		bottom: 1px;
+		left: unset;
+		width: 59px;
+		height: 5px;
+	}
+
+	.comment-box {
+		height: 46.5vh;
+	}
+
+	.profile-info {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: fit-content;
+	}
+
+	.profile-info-item {
+		margin: 1% 0;
+		width: 100%;
+	}
+
+
+
+	.profile-box h1 {
+		font-size: 0.6rem;
+	}
+
+	.profile-name,
+	.profile-info {
+		font-size: 0.4rem;
+		margin: 2%;
+		padding: 0;
+	}
+
+	.profile-box {
+		height: fit-content;
+		padding: 3% 2% 2%;
+		width: 100%;
+	}
+
+	.profile-image {
+		border-radius: 12px;
+		width: 97px;
+		height: 85px;
+	}
+
+	.yearbook-quote {
+		border-radius: 10px;
+		font-size: 0.5rem;
+		padding: 3%;
+	}
+
+	.yearbook-heading {
+		padding: 0 8%;
+	}
+
+	.yearbook-heading span::before {
+		height: 4px;
+		width: 48px;
+	}
+
+	.profile-button {
+		padding: 2%;
+		font-size: 0.5rem;
+		width: 28%;
+		margin: 0;
+	}
+
+	.c p {
+		margin-top: 0;
+	}
+
+	.c {
+		padding: 2%;
+		margin: 1% 2%;
+	}
+
+
+
+
+	.links,
+	.search-bar {
+		top: 0;
+		position: unset;
+		flex: 2;
+		border-radius: 0;
+	}
+
+	.links {
+		flex: 1;
+		border-bottom-right-radius: 10px;
+		border-left: 1.5px solid #e7e9ed;
+	}
+
+	.search-bar {
+		padding: 2%;
+		border-bottom-left-radius: 10px;
+
+	}
+
+	.search-bar::after,
+	ul::before {
+		display: none;
+	}
+
+	.nav-links li a {
+		font-size: 0.6rem;
+	}
+
+	#search {
+		height: 3vh;
+		font-size: 0.6rem;
+		padding-left: 0;
+	}
+
+	.search-container i {
+		transform: scale(0.7);
+	}
+
+	.search-container {
+		padding-left: 1.5%;
+		border-radius: 5px;
+	}
+
+	.navbar-top {
+		display: flex;
+		justify-content: space-between;
+		width: 95%;
+	}
+
+
+	.social {
+		position: absolute;
+		justify-content: space-between;
+		width: 60vw;
+		height: fit-content;
+		left: unset;
+		bottom: 0;
+		background-color: lightskyblue;
+		border-radius: 15px;
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+		display: flex;
+		top: unset;
+		flex-direction: row;
+		background: rgba(255, 255, 255, .7);
+		-webkit-backdrop-filter: blur(10px);
+		backdrop-filter: blur(10px);
+	}
+
+	.sarc-logo {
+		width: 20%;
+		height: 5vh;
+		background-image: url(../images/sarc-logo_1-01.jpeg);
+		background-position: center;
+		background-size: contain;
+		margin-bottom: 0;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 0px;
+	}
+
+	.social .social-links a i {
+		transform: scale(0.5);
+	}
+
+	.social-links {
+		padding-right: 0%;
+		width: 75%;
+		display: unset;
+	}
+
+	.red,
+	.yellow,
+	.blue {
+		width: 7px;
+		right: 5px;
+		height: 7px;
+	}
+
+	.blue {
+		right: 5px;
+		top: 14px;
+	}
+
+	.yellow {
+		right: 5px;
+		top: 5px;
+	}
 
 }
