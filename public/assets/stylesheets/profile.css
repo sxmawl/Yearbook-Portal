@@ -31,7 +31,7 @@ body {
 	width: 100vw;
 	height: 100vh;
 	background-size: cover;
-	overflow: hidden;
+	overflow-x: hidden;
 }
 
 /* CSS for Navigation Bar and Hamburger Menu */
