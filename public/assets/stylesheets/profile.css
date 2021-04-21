@@ -1055,11 +1055,13 @@ CSS FOR SOCIAL */
 
 	.yearbook-heading {
 		padding: 0 8%;
+		text-align: center;
 	}
 
 	.yearbook-heading span::before {
 		height: 4px;
 		width: 48px;
+		left: 90px;
 	}
 
 	.profile-button {
