@@ -45,3 +45,23 @@ $(".comment-box").scroll(function() {
   } 
 });
 
+
+const modal = document.querySelector("#myModal");
+const button = document.querySelector("#myBtn");
+const spanClose = document.querySelector(".close");
+
+button.onclick = () => {
+  modal.style.display = "block";
+  console.log("JJjjj");
+}
+
+spanClose.onclick = () => {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = event => {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
