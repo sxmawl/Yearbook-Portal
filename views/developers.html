@@ -1,13 +1,17 @@
 <!DOCTYPE html>
+
 <head>
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Profile</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css"
+        integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../public/assets/stylesheets/developers.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -21,7 +25,7 @@
                 <div class="search-bar">
                     <form action="" method="POST">
                         <div class="search-container">
-                            <i class="fas fa-search"></i> 
+                            <i class="fas fa-search"></i>
                             <input type="text" name="user[bitsid]" id="search" placeholder="Search by BITS ID">
                         </div>
                     </form>
@@ -29,94 +33,106 @@
 
                 <div class="links" id="nav-links">
                     <ul class="nav-links">
-                            <li><a href="../views/profile.html">Profile</a></li>
-                            <li><a href="/auth/logout">Logout</a></li>
+                        <li><a href="../views/profile.html">Profile</a></li>
+                        <li><a href="/auth/logout">Logout</a></li>
                     </ul>
                 </div>
 
             </div>
-         
+
             <div class="team-heading">
                 <h1>Meet Our Team</h1>
             </div>
             <div class="main-content">
-                
-              <div class="developer-card">
-                <div class="developer-image"></div>
-                <h2 class="developer-name"><span>Saksham </span>Aggarwal</h2>
-                <p>Frontend, UI/UX, Backend</p>
-                <div class="developer-contact">
-                    <a href="https://twitter.com" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://twitter.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="https://twitter.com" target="_blank"><i class="fab fa-instagram"></i></a>
-                </div>
-              </div>
 
-              <div class="developer-card">
-                <div class="developer-image"></div>
-                <h2 class="developer-name"><span>Saksham </span>Aggarwal</h2>
-                <p>Frontend, UI/UX, Backend</p>
-                <div class="developer-contact">
-                    <a href="https://twitter.com" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://twitter.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="https://twitter.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <div class="developer-card">
+                    <div class="developer-image"></div>
+                    <h2 class="developer-name"><span>Saksham </span>Aggarwal</h2>
+                    <p>Frontend, UI/UX, Backend</p>
+                    <div class="developer-contact">
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
-              </div>
-              
-              <div class="developer-card">
-                <div class="developer-image"></div>
-                <h2 class="developer-name"><span>Saksham </span>Aggarwal</h2>
-                <p>Frontend, UI/UX, Backend</p>
-                <div class="developer-contact">
-                    <a href="https://twitter.com" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://twitter.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="https://twitter.com" target="_blank"><i class="fab fa-instagram"></i></a>
-                </div>
-              </div>
 
-              <div class="developer-card">
-                <div class="developer-image"></div>
-                <h2 class="developer-name"><span>Saksham </span>Aggarwal</h2>
-                <p>Frontend, UI/UX, Backend</p>
-                <div class="developer-contact">
-                    <a href="https://twitter.com" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://twitter.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="https://twitter.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <div class="developer-card">
+                    <div class="developer-image"></div>
+                    <h2 class="developer-name"><span>Saksham </span>Aggarwal</h2>
+                    <p>Frontend, UI/UX, Backend</p>
+                    <div class="developer-contact">
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
-              </div>
 
-              <div class="developer-card">
-                  <div class="developer-image"></div>
-                  <h2 class="developer-name"><span>Saksham </span>Aggarwal</h2>
-                <p>Frontend, UI/UX, Backend</p>
-                <div class="developer-contact">
-                    <a href="https://twitter.com" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://twitter.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="https://twitter.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <div class="developer-card">
+                    <div class="developer-image"></div>
+                    <h2 class="developer-name"><span>Saksham </span>Aggarwal</h2>
+                    <p>Frontend, UI/UX, Backend</p>
+                    <div class="developer-contact">
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
-              </div>
 
-              <div class="developer-card">
-                <div class="developer-image"></div>
-                <h2 class="developer-name"><span>Saksham </span>Aggarwal</h2>
-                <p>Frontend, UI/UX, Backend</p>
-                <div class="developer-contact">
-                    <a href="https://twitter.com" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://twitter.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="https://twitter.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <div class="developer-card">
+                    <div class="developer-image"></div>
+                    <h2 class="developer-name"><span>Saksham </span>Aggarwal</h2>
+                    <p>Frontend, UI/UX, Backend</p>
+                    <div class="developer-contact">
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
-              </div>
-              
+
             </div>
         </div>
+
+        <div class="social">
+            <div class="sarc-logo"> </div>
+            <div class="social-links">
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-linkedin-in fa-2x"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="https://twitter.com" target="_blank" id="instagram"><i class="fab fa-instagram fa-2x"></i></a>
+
+            </div>
+            <div class="yellow"></div>
+            <div class="blue"></div>
+            <div class="red"></div>
+        </div>
+
+        <div class="modal" id="myModal">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2>Incorrect BITS ID</h2>
+                </div>
+
+                <div class="modal-body">
+                    <p>Try again to know your batchies' secrets 🤫</p>
+                </div>
+
+            </div>
+        </div>
+        <button id="myBtn"></button>
+        <div class="developer-container">
+            <a href="../views/developers.html"><i class="fas fa-code" id="toggleIcon"></i></a>
+        </div>
+        <div class="dark-mode-container">
+            <i class="fas fa-moon" id="toggleIcon"></i>
+        </div>
     </section>
-            <!-- <footer>
+    <!-- <footer>
                 <h3>Follow us on:</h3>
                 <div class="icons">
                     <a href="https://www.linkedin.com/company/arcbitspilani/?originalSubdomain=in"><img src="../public/assets/images/linkedin.png" id="linkedin"></a>
@@ -125,7 +141,10 @@
                 </div>
                 <button id="back"><a href="/profile/">Back to My Profile</a></button>
             </footer> -->
-            <script src="../public/assets/scipts/app.js"></script>
-            <script src="https://kit.fontawesome.com/d689986894.js" crossorigin="anonymous"></script>
-        </body>
-        </html>
+    <script src="https://kit.fontawesome.com/d689986894.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/adriancooney/console.image/c9e6d4fd/console.image.min.js"></script>
+    <script src="../public/assets/scipts/dev.js"></script>
+    <script src="https://kit.fontawesome.com/d689986894.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
